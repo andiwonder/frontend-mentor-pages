@@ -1,25 +1,26 @@
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
+import RockPaperScissorsGame from './components/Rock-Paper-Scissors-game/';
+import EcommerceProductPage from './components/E-commerce-product-page/';
+import IntroDropdownNavigation from './components/Intro-doprdown-navigation/';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-         Hi CannonMan !!! Coming Soon {'<3'}
-        </p>
-        <section>
-          <div>
-            <h2>E-commerce product page</h2>
-          </div>
-          <div>
-            <h2>Rock, Paper, Scissors game</h2>
-          </div>
-          <div>
-            <h2>Intro section with dropdown navigation</h2>
-          </div>
-        </section>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/ecommerce-product-page" element={<EcommerceProductPage />} />
+          <Route path="/intro-dropdown-navigation" element={<IntroDropdownNavigation />} />
+          <Route path="/rock-paper-scissors-game" element={<RockPaperScissorsGame />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
