@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/frontend-mentor-pages" element={<EcommerceProductPage />} />
+          <Route path="frontend-mentor-pages" element={<EcommerceProductPage />} />
           <Route path="/intro-dropdown-navigation" element={<IntroDropdownNavigation />} />
           <Route path="/rock-paper-scissors-game" element={<RockPaperScissorsGame />} />
         </Routes>
